@@ -22,6 +22,14 @@ console.log(path.join(__dirname, '../public'));
 const app = express();
 //----------------------------------------------------------
 
+/** -------------------------------------------------------
+ *                   Definisco la porta per heroku        -
+ * --------------------------------------------------------
+ */ 
+const port = process.env.PORT || 3000;
+// --------------------------------------------------------
+
+
 //---------------- Directory per i partials-----------------
 const partialsPath = path.join(__dirname, '../templates/partials');
 hbs.registerPartials(partialsPath);
@@ -147,7 +155,7 @@ app.get('*', (req, res) => { // per tutto il resto ritorna errore 404
 //---------------------------------------------------------------------------
 //                              Start Web Server                            -
 //---------------------------------------------------------------------------
-app.listen(3000, () => {
-    console.log('Server is runnning on port 3000');
+app.listen(port, () => {
+    console.log('Server is runnning on port ' + port);
 });
 //---------------------------------------------------------------------------
