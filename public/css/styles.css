@@ -1,0 +1,55 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px; /* massima larghezza della pagina del sito */
+    margin: 0 auto;  /* 0 è per top/bottom. auto è per left/right*/
+    padding: 0 16px; /* lascia un margine destra/sinistra nel caso si riduce il browser */
+
+    display: flex; /* abilita flexbox */
+    flex-direction: column;
+    min-height: 100vh; /* altezza del body è il 100% della finestra*/
+}
+
+.main-content {
+    flex-grow: 1; /* indica all'elemento di prendere tutto lo spazio rimasto */
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px ;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a { /* mi riferisco ai link dentro l'header*/
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none; /* tolgo il sottolineato */
+}
+
+.portrait { /* si applica alle immagini di classe portrait*/
+    width: 250px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding:  8px;
+}
